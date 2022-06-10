@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module MyEnumerable
   def all?
     each { |n| return false unless block.call(n) }

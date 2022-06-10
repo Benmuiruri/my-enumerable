@@ -6,4 +6,10 @@ module MyEnumerable
   def any?
     each { |n| return true if block.call(n) }
   end
+  
+  def filter
+    arr = []
+    each { |n| arr.push(n) if block.call(n) }
+    arr
+  end
 end
